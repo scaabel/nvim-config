@@ -6,12 +6,21 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "chadracula-evondev",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
+}
+
+M.mason = {
+  pkgs = {
+    "typescript-language-server",
+    "lua-language-server",
+    "eslint-lsp",
+    "prettierd"
+  }
 }
 
 return M
