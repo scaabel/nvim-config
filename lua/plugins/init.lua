@@ -16,22 +16,6 @@ return {
     end,
   },
 
-  {
-    "mfussenegger/nvim-lint",
-    event = "VeryLazy",
-    config = function ()
-      require "configs.lint"
-    end
-  },
-
-  --{
-   -- "mhartington/formatter.nvim",
-  --  event = "VeryLazy",
-   -- opts = function ()
-    --  return require "configs.formatter"
-    --end
-  --}
-
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {

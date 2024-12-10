@@ -16,10 +16,24 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+local function organize_imports()
+  local params = {
+    command = "_typescript.organizeImports",
+    arguments = {vim.api.nvim_buf_get_name(0)}
+  }
+  vim.lsp.buf.execute_command(params)
+end
+
 -- configuring single server, example: typescript
  lspconfig.ts_ls.setup {
    on_attach = nvlsp.on_attach,
    on_init = nvlsp.on_init,
    capabilities = nvlsp.capabilities,
+  commands = {
+    OrganizeImports = {
+      organize_imports,
+      description = "Organize imports"
+    }
+  }
 }
 
